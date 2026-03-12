@@ -218,6 +218,46 @@ address {
   line-height: 1.8;
 }
 
+/* ─── Rehearsal programme list ──────────────────────────────────────────────── */
+
+table.programme {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0 1.25rem 0;
+  font-size: 0.9rem;
+  border-left: 3px solid var(--colour-accent);
+}
+
+table.programme th,
+table.programme td {
+  text-align: left;
+  padding: 0.4rem 0.75rem;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+table.programme th {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--colour-muted);
+  background: none;
+  font-weight: bold;
+}
+
+table.programme tr:last-child td {
+  border-bottom: none;
+}
+
+table.programme td:nth-child(2),
+table.programme td:nth-child(3) {
+  white-space: nowrap;
+  color: var(--colour-muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+}
+
 /* ─── Tables ────────────────────────────────────────────────────────────────── */
 
 .schedule-table {
