@@ -1,4 +1,8 @@
-/* ─── Reset & base ─────────────────────────────────────────────────────────── */
+/* ─── Google Fonts ───────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Merriweather+Sans:wght@400;600;700&display=swap');
+
+/* ─── Reset & base ───────────────────────────────────────────────────────────── */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -7,14 +11,15 @@
 }
 
 :root {
-  --colour-primary:   #1a2744;   /* deep navy */
-  --colour-accent:    #b5892a;   /* gold */
+  --colour-primary:   #1a2744;
+  --colour-accent:    #b5892a;
   --colour-bg:        #ffffff;
-  --colour-surface:   #f5f4f0;
-  --colour-text:      #1c1c1c;
-  --colour-muted:     #555;
-  --max-width:        900px;
-  --section-padding:  3rem 1.25rem;
+  --colour-surface:   #f6f5f1;
+  --colour-border:    #e2dfd9;
+  --colour-text:      #2c2c2c;
+  --colour-muted:     #636363;
+  --max-width:        1100px;
+  --section-padding:  3.5rem 1.5rem;
 }
 
 html {
@@ -22,9 +27,9 @@ html {
 }
 
 body {
-  font-family: Georgia, 'Times New Roman', serif;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-family: Merriweather, Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.8;
   color: var(--colour-text);
   background: var(--colour-bg);
 }
@@ -38,7 +43,7 @@ a:hover {
   color: var(--colour-accent);
 }
 
-/* ─── Layout helper ─────────────────────────────────────────────────────────── */
+/* ─── Layout helper ──────────────────────────────────────────────────────────── */
 
 .section-inner {
   max-width: var(--max-width);
@@ -46,56 +51,84 @@ a:hover {
   padding: var(--section-padding);
 }
 
-/* ─── Header & nav ──────────────────────────────────────────────────────────── */
+/* ─── Header ─────────────────────────────────────────────────────────────────── */
 
 header {
-  background: var(--colour-primary);
-  color: #fff;
+  background: #fff;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
 }
 
-.header-inner {
+.header-brand {
+  border-bottom: 1px solid var(--colour-border);
+}
+
+.header-brand-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0.9rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  padding: 0.9rem 1.5rem;
 }
 
 .site-title {
   text-decoration: none;
-  color: #fff;
+  color: var(--colour-primary);
+  display: inline-block;
 }
 
-.title-main {
-  font-size: 1.15rem;
-  font-weight: bold;
-  letter-spacing: 0.01em;
+.site-logo {
+  display: block;
+  height: 52px;
+  width: auto;
+}
+
+.title-tagline {
+  display: block;
+  font-family: Merriweather, Georgia, serif;
+  font-style: italic;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--colour-muted);
+  margin-top: 0.15rem;
+}
+
+.header-nav-bar {
+  background: var(--colour-primary);
+}
+
+.header-nav-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
 }
 
 nav a {
-  color: #fff;
+  display: block;
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.9rem;
+  font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  padding: 0.8rem 1rem;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
 }
 
-nav a:hover {
-  color: var(--colour-accent);
+nav a:hover,
+nav a[aria-current="page"] {
+  color: #fff;
+  border-bottom-color: var(--colour-accent);
 }
 
 .nav-toggle {
@@ -105,35 +138,51 @@ nav a:hover {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  padding: 0.6rem 0.5rem;
+  line-height: 1;
 }
 
-/* ─── Hero ──────────────────────────────────────────────────────────────────── */
+/* ─── Hero ───────────────────────────────────────────────────────────────────── */
 
 .hero {
-  background: var(--colour-primary);
+  background-color: var(--colour-primary);
+  background-image: url('../assets/hero.jpg');
+  background-size: cover;
+  background-position: center top;
   color: #fff;
-  border-bottom: 4px solid var(--colour-accent);
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 25, 55, 0.68);
 }
 
 .hero .section-inner {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
+  position: relative;
+  z-index: 1;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .next-label {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.16em;
   color: var(--colour-accent);
   margin-bottom: 0.5rem;
 }
 
 .hero h1 {
-  font-size: 2.4rem;
-  line-height: 1.2;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.15;
   margin-bottom: 0.4rem;
+  color: #fff;
 }
 
 .concert-details {
@@ -142,82 +191,103 @@ nav a:hover {
 }
 
 .concert-venue {
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-}
-
-.programme {
   margin-bottom: 2rem;
 }
 
+.programme {
+  margin-bottom: 2.5rem;
+}
+
 .programme h2 {
-  font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.14em;
   color: var(--colour-accent);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+  border: none;
+  padding: 0;
+  display: block;
+  color: var(--colour-accent);
 }
 
 .programme ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
 }
 
 .programme li {
-  padding: 0.2rem 0;
+  padding: 0.25rem 0;
+  font-size: 1.05rem;
 }
+
+/* ─── Buttons ────────────────────────────────────────────────────────────────── */
 
 .button {
   display: inline-block;
   background: var(--colour-accent);
   color: #fff;
   text-decoration: none;
-  padding: 0.7rem 1.6rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.75rem;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
   letter-spacing: 0.04em;
-  border-radius: 3px;
-  transition: background 0.2s;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  border: 2px solid var(--colour-accent);
+  transition: background 0.2s, color 0.2s;
 }
 
 .button:hover {
-  background: #9a741f;
-  color: #fff;
+  background: transparent;
+  color: var(--colour-accent);
 }
 
-/* ─── Sections ──────────────────────────────────────────────────────────────── */
+.hero .button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: transparent;
+}
+
+/* ─── Sections ───────────────────────────────────────────────────────────────── */
+
+section {
+  border-bottom: 1px solid var(--colour-border);
+}
 
 section:nth-child(even) {
   background: var(--colour-surface);
 }
 
-h2 {
-  font-size: 1.6rem;
+h1 {
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
   color: var(--colour-primary);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--colour-primary);
+  margin-bottom: 1rem;
   padding-bottom: 0.4rem;
   border-bottom: 2px solid var(--colour-accent);
   display: inline-block;
 }
 
 h3 {
-  font-size: 1rem;
-  margin-bottom: 0.2rem;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--colour-primary);
-}
-
-#rehearsals h3 {
-  margin-top: 2.5rem;
-  padding-top: 1.5rem;
-  border-top: 2px solid var(--colour-accent);
-}
-
-#rehearsals h2  {
-  margin-top: 0;
-  padding-top: 0;
-  border-top: none;
+  margin-bottom: 0.4rem;
 }
 
 p {
@@ -226,16 +296,44 @@ p {
 
 address {
   font-style: normal;
-  margin: 0.5rem 0 1rem 0;
-  line-height: 1.8;
+  margin: 0.5rem 0 1.25rem;
+  line-height: 1.9;
 }
 
-/* ─── Rehearsal programme list ──────────────────────────────────────────────── */
+/* ─── Blockquote ─────────────────────────────────────────────────────────────── */
+
+blockquote {
+  border-left: 4px solid var(--colour-accent);
+  margin: 1.75rem 0;
+  padding: 1rem 1.5rem;
+  background: var(--colour-surface);
+}
+
+blockquote p {
+  margin-bottom: 0.3rem;
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+blockquote footer {
+  background: none;
+  color: var(--colour-muted);
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.85rem;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  flex-direction: unset;
+  align-items: unset;
+  justify-content: unset;
+}
+
+/* ─── Rehearsal programme list ───────────────────────────────────────────────── */
 
 table.programme {
   width: 100%;
   border-collapse: collapse;
-  margin: 0.75rem 0 1.25rem 0;
+  margin: 0.75rem 0 1.5rem;
   font-size: 0.9rem;
   border-left: 3px solid var(--colour-accent);
 }
@@ -243,19 +341,19 @@ table.programme {
 table.programme th,
 table.programme td {
   text-align: left;
-  padding: 0.4rem 0.75rem;
-  border-bottom: 1px solid #ddd;
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--colour-border);
   vertical-align: top;
 }
 
 table.programme th {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--colour-muted);
+  font-weight: 700;
   background: none;
-  font-weight: bold;
 }
 
 table.programme tr:last-child td {
@@ -266,11 +364,11 @@ table.programme td:nth-child(2),
 table.programme td:nth-child(3) {
   white-space: nowrap;
   color: var(--colour-muted);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
   font-size: 0.85rem;
 }
 
-/* ─── Tables ────────────────────────────────────────────────────────────────── */
+/* ─── General tables ─────────────────────────────────────────────────────────── */
 
 .schedule-table {
   width: 100%;
@@ -282,28 +380,56 @@ table.programme td:nth-child(3) {
 .schedule-table th,
 .schedule-table td {
   text-align: left;
-  padding: 0.55rem 0.75rem;
-  border-bottom: 1px solid #ddd;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--colour-border);
 }
 
 .schedule-table th {
   background: var(--colour-primary);
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.85rem;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .schedule-table tr:last-child td {
   border-bottom: none;
 }
 
-.schedule-table tr:hover td {
-  background: #ede9e0;
+.schedule-table tbody tr:hover td {
+  background: #edeae1;
 }
 
-/* ─── People grid ───────────────────────────────────────────────────────────── */
+/* ─── Rehearsal section headings ─────────────────────────────────────────────── */
+
+#rehearsals h3 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--colour-accent);
+}
+
+#rehearsals h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+/* ─── Content lists ──────────────────────────────────────────────────────────── */
+
+.benefits-list,
+.friends-list {
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-list li,
+.friends-list li {
+  margin-bottom: 0.3rem;
+}
+
+/* ─── People grid ────────────────────────────────────────────────────────────── */
 
 .people-grid {
   display: grid;
@@ -323,40 +449,18 @@ table.programme td:nth-child(3) {
   font-size: 0.95rem;
 }
 
-/* ─── Blockquote ────────────────────────────────────────────────────────────── */
+/* ─── Footer ─────────────────────────────────────────────────────────────────── */
 
-blockquote {
-  border-left: 4px solid var(--colour-accent);
-  margin: 1.5rem 0;
-  padding: 0.75rem 1.25rem;
-  background: var(--colour-surface);
-}
-
-blockquote p {
-  margin-bottom: 0.25rem;
-  font-style: italic;
-}
-
-blockquote footer {
-  background: none;
-  color: var(--colour-muted);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.85rem;
-  padding: 0;
-}
-
-/* ─── Footer ────────────────────────────────────────────────────────────────── */
-
-footer {
+body > footer {
   background: var(--colour-primary);
-  color: #ccc;
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'Merriweather Sans', Arial, sans-serif;
   font-size: 0.85rem;
 }
 
-footer .section-inner {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+body > footer .section-inner {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -364,23 +468,27 @@ footer .section-inner {
   justify-content: space-between;
 }
 
-footer p {
+body > footer p {
   margin: 0;
 }
 
-footer a {
+body > footer a {
   color: var(--colour-accent);
 }
 
-footer a:hover {
+body > footer a:hover {
   color: #fff;
 }
 
-/* ─── Mobile ────────────────────────────────────────────────────────────────── */
+/* ─── Mobile ─────────────────────────────────────────────────────────────────── */
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
+  :root {
+    --section-padding: 2.5rem 1.1rem;
+  }
+
   .title-main {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .nav-toggle {
@@ -390,6 +498,7 @@ footer a:hover {
   nav {
     display: none;
     width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
   }
 
   nav.open {
@@ -398,22 +507,28 @@ footer a:hover {
 
   nav ul {
     flex-direction: column;
-    gap: 0;
-    padding: 0.5rem 0 0.75rem 0;
   }
 
   nav a {
-    display: block;
-    padding: 0.5rem 0;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0.7rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 3px solid transparent;
   }
 
-  .header-inner {
+  nav a:hover,
+  nav a[aria-current="page"] {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--colour-accent);
+  }
+
+  .header-nav-inner {
     flex-wrap: wrap;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .hero h1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .schedule-table th:last-child,
@@ -421,7 +536,7 @@ footer a:hover {
     display: none;
   }
 
-  footer .section-inner {
+  body > footer .section-inner {
     flex-direction: column;
     gap: 0.5rem;
     align-items: flex-start;
