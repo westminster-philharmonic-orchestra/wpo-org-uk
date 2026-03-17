@@ -74,23 +74,34 @@ header {
 .site-title {
   text-decoration: none;
   color: var(--colour-primary);
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .site-logo {
   display: block;
-  height: 52px;
+  height: 72px;
   width: auto;
+  flex-shrink: 0;
+}
+
+.title-main {
+  font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--colour-primary);
 }
 
 .title-tagline {
-  display: block;
   font-family: Merriweather, Georgia, serif;
   font-style: italic;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 300;
   color: var(--colour-muted);
-  margin-top: 0.15rem;
+  line-height: 1.4;
 }
 
 .header-nav-bar {
@@ -487,8 +498,12 @@ body > footer a:hover {
     --section-padding: 2.5rem 1.1rem;
   }
 
-  .title-main {
-    font-size: 1.05rem;
+  .site-logo {
+    height: 52px;
+  }
+
+  .title-tagline {
+    display: none;
   }
 
   .nav-toggle {
