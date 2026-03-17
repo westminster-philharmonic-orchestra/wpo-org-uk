@@ -208,6 +208,18 @@ h3 {
   color: var(--colour-primary);
 }
 
+#rehearsals h3 {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid var(--colour-accent);
+}
+
+#rehearsals h2  {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
 p {
   margin-bottom: 1rem;
 }
@@ -309,6 +321,28 @@ table.programme td:nth-child(3) {
   margin: 0;
   color: var(--colour-muted);
   font-size: 0.95rem;
+}
+
+/* ─── Blockquote ────────────────────────────────────────────────────────────── */
+
+blockquote {
+  border-left: 4px solid var(--colour-accent);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  background: var(--colour-surface);
+}
+
+blockquote p {
+  margin-bottom: 0.25rem;
+  font-style: italic;
+}
+
+blockquote footer {
+  background: none;
+  color: var(--colour-muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  padding: 0;
 }
 
 /* ─── Footer ────────────────────────────────────────────────────────────────── */
