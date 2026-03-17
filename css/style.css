@@ -153,6 +153,59 @@ nav a[aria-current="page"] {
   line-height: 1;
 }
 
+/* ─── Submenu ────────────────────────────────────────────────────────────────── */
+
+.has-submenu {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+}
+
+.submenu-toggle {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0.8rem 0.4rem 0.8rem 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.submenu-toggle:hover {
+  color: #fff;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: var(--colour-primary);
+  min-width: 130px;
+  z-index: 100;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.submenu li {
+  display: block;
+}
+
+.submenu a {
+  padding: 0.7rem 1.2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-left: none;
+  white-space: nowrap;
+}
+
+.has-submenu:hover .submenu,
+.has-submenu.open .submenu {
+  display: flex;
+}
+
 /* ─── Hero ───────────────────────────────────────────────────────────────────── */
 
 .hero {
@@ -579,6 +632,26 @@ body > footer a:hover {
   nav a[aria-current="page"] {
     border-bottom-color: rgba(255, 255, 255, 0.1);
     border-left-color: var(--colour-accent);
+  }
+
+  .has-submenu:hover .submenu {
+    display: none;
+  }
+
+  .has-submenu.open .submenu {
+    display: flex;
+    position: static;
+    box-shadow: none;
+    background: rgba(0,0,0,0.2);
+  }
+
+  .has-submenu.open .submenu a {
+    padding-left: 2.5rem;
+  }
+
+  .submenu-toggle {
+    padding: 0.7rem 1rem 0.7rem 0;
+    font-size: 0.8rem;
   }
 
   .header-nav-inner {

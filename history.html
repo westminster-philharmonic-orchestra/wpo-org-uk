@@ -26,9 +26,13 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="rehearsals.html">Rehearsals</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="people.html">People</a></li>
-            <li><a href="history.html" aria-current="page">History</a></li>
+            <li class="has-submenu">
+              <a href="about.html">About</a><button class="submenu-toggle" aria-expanded="false" aria-label="About submenu">&#9662;</button>
+              <ul class="submenu">
+                <li><a href="people.html">People</a></li>
+                <li><a href="history.html" aria-current="page">History</a></li>
+              </ul>
+            </li>
             <li><a href="support.html">Support Us</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -42,11 +46,6 @@
     <section id="history">
       <div class="section-inner">
         <h1>History</h1>
-
-        <blockquote>
-          <p>&ldquo;The Westminster Philharmonic is notably adventurous in its programming and large-scale music is widely featured.&rdquo;</p>
-          <footer>&mdash; Antony Hodgson, <cite>Classical Source</cite></footer>
-        </blockquote>
 
         <h2>Foundation</h2>
         <p>The Westminster Philharmonic Orchestra was established in <strong>1972</strong> by Joseph Pilbury with a clear purpose: to enable accomplished amateur musicians to perform ambitious, large-scale compositions that few amateur orchestras attempt. From the outset, the WPO set itself apart by tackling the most demanding works in the symphonic repertoire.</p>

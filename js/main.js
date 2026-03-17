@@ -19,3 +19,12 @@ nav.querySelectorAll('a').forEach(link => {
     toggle.setAttribute('aria-label', 'Open navigation');
   });
 });
+
+// Submenu toggle (mobile)
+document.querySelectorAll('.submenu-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.has-submenu');
+    const open = item.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+});
