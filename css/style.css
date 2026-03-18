@@ -24,9 +24,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  margin: 0;
   font-family: Merriweather, Georgia, 'Times New Roman', serif;
   font-size: 1rem;
   line-height: 1.8;
@@ -209,7 +211,8 @@ nav a[aria-current="page"] {
 /* ─── Hero image ─────────────────────────────────────────────────────────────── */
 
 .hero-image {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   line-height: 0;
 }
 
@@ -346,7 +349,7 @@ section {
   border-bottom: 1px solid var(--colour-border);
 }
 
-section:nth-child(even) {
+section:nth-of-type(even) {
   background: var(--colour-surface);
 }
 
