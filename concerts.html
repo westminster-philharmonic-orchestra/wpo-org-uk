@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concerts &mdash; Westminster Philharmonic Orchestra</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/jpeg" href="assets/wpo-icon.jpeg">
+</head>
+<body>
+
+  <header>
+    <div class="header-brand">
+      <div class="header-brand-inner">
+        <a href="index.html"" class="site-title">
+          <img src="assets/wpo-logo.png" alt="" class="site-logo">
+          <span class="title-main">Westminster Philharmonic Orchestra</span>
+          <span class="title-tagline">One of London&rsquo;s leading amateur orchestras</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="header-nav-inner">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">&#9776;</button>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="index.html"">Home</a></li>
+            <li><a href="concerts.html" aria-current="page">Concerts</a></li>
+            <li><a href="rehearsals.html">Rehearsals</a></li>
+            <li class="has-submenu">
+              <a href="about.html">About</a><button class="submenu-toggle" aria-expanded="false" aria-label="About submenu">&#9662;</button>
+              <ul class="submenu">
+                <li><a href="people.html">People</a></li>
+                <li><a href="history.html">History</a></li>
+              </ul>
+            </li>
+            <li><a href="support.html">Support Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="concerts">
+      <div class="section-inner">
+        <h1>Concerts</h1>
+        <p>Five concerts in London venues, exploring a wide range of ambitious orchestral repertoire.</p>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Programme</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="upcoming">
+              <td><time datetime="2026-06-07">7 Jun 2026</time></td>
+              <td>Programme to be confirmed</td>
+              <td>Langton&rsquo;s Lakeside, Havering</td>
+            </tr>
+            <tr class="upcoming">
+              <td><time datetime="2026-05-09">9 May 2026</time></td>
+              <td><a href="concerts/spring-2026-05-09.html">Lili Boulanger,&nbsp <em>D&rsquo;un Matin de Printemps</em>; Bantock,&nbsp <em>Russian Scenes</em>; Gipps,&nbsp <em>Oboe Concerto</em>; Elgar,&nbsp <em>Symphony No. 1</em></a></td>
+              <td>St Giles Cripplegate</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><a href="rehearsals.html">Full rehearsal schedule &rarr;</a></p>
+
+        <h2>Past Concerts</h2>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Programme</th>
+              <th>Venue</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><time datetime="2026-02-28">28 Feb 2026</time></td>
+              <td>Holst,&nbsp <em>Ballet from The Perfect Fool</em>; Korngold,&nbsp <em>Violin Concerto</em>; George Lloyd,&nbsp <em>Symphony No. 4</em></td>
+              <td>St John&rsquo;s Waterloo</td>
+            </tr>
+            <tr>
+              <td><time datetime="2025-12-06">6 Dec 2025</time></td>
+              <td>Coleridge-Taylor,&nbsp <em>The Bamboula</em>; Rachmaninoff,&nbsp <em>Rhapsody on a Theme of Paganini</em>; Vaughan Williams,&nbsp <em>Job: A Masque for Dancing</em></td>
+              <td>St John&rsquo;s Waterloo</td>
+            </tr>
+            <tr>
+              <td><time datetime="2025-10-18">18 Oct 2025</time></td>
+              <td>Poulenc,&nbsp <em>Les Biches</em>; Gregson,&nbsp <em>Tuba Concerto</em>; Sibelius,&nbsp <em>En Saga</em>; Stravinsky,&nbsp <em>Firebird Suite</em></td>
+              <td>St Giles Cripplegate</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <p>&copy; <span id="year"></span> Westminster Philharmonic Orchestra &mdash; Registered Charity No. 1053703</p>
+      <p><a href="mailto:info@wpo.org.uk">info@wpo.org.uk</a></p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
