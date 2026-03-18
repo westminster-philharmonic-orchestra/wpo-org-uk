@@ -519,6 +519,13 @@ table.programme td:nth-child(3) {
   white-space: nowrap;
 }
 
+#concerts .schedule-table th {
+  background: none;
+  color: var(--colour-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--colour-border);
+}
+
 
 /* ─── General tables ─────────────────────────────────────────────────────────── */
 
