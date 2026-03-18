@@ -214,6 +214,7 @@ nav a[aria-current="page"] {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   line-height: 0;
+  position: relative;
 }
 
 .hero-image img {
@@ -222,6 +223,39 @@ nav a[aria-current="page"] {
   max-height: 400px;
   object-fit: cover;
   object-position: center;
+}
+
+.concert-overlay {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  background: rgba(26, 39, 68, 0.88);
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  max-width: 320px;
+  line-height: 1.4;
+}
+
+.concert-overlay .next-label {
+  margin-bottom: 0.4rem;
+}
+
+.concert-overlay-date {
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.concert-overlay-detail,
+.concert-overlay-programme {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.25rem;
+}
+
+.concert-overlay-programme {
+  margin-bottom: 1rem;
 }
 
 /* ─── Hero ───────────────────────────────────────────────────────────────────── */
@@ -680,6 +714,14 @@ body > footer a:hover {
 
   .hero h1 {
     font-size: 1.8rem;
+  }
+
+  .concert-overlay {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: none;
+    padding: 0.9rem 1.1rem;
   }
 
   .schedule-table th:last-child,
