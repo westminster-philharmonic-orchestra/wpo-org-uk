@@ -493,6 +493,21 @@ table.programme td:nth-child(3) {
   font-size: 0.85rem;
 }
 
+/* ─── Concert detail page ────────────────────────────────────────────────────── */
+
+.concert-detail .section-inner {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.concert-detail .next-label {
+  color: var(--colour-accent);
+}
+
+.concert-detail .concert-venue {
+  color: var(--colour-muted);
+}
+
 /* ─── Concerts page ──────────────────────────────────────────────────────────── */
 
 #concerts h1 {
