@@ -206,6 +206,21 @@ nav a[aria-current="page"] {
   display: flex;
 }
 
+/* ─── Hero image ─────────────────────────────────────────────────────────────── */
+
+.hero-image {
+  width: 100%;
+  line-height: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  display: block;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
 /* ─── Hero ───────────────────────────────────────────────────────────────────── */
 
 .hero {
