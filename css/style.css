@@ -45,6 +45,26 @@ a:hover {
   color: var(--colour-accent);
 }
 
+/* ─── Skip link ──────────────────────────────────────────────────────────────── */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  padding: 0.6rem 1.2rem;
+  background: var(--colour-primary);
+  color: #fff;
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 /* ─── Layout helper ──────────────────────────────────────────────────────────── */
 
 .section-inner {
@@ -265,7 +285,7 @@ nav a[aria-current="page"] {
   margin: 0;
   padding: 1.25rem 1.5rem;
   max-width: 320px;
-  background: rgba(26, 39, 68, 0.78);
+  background: rgba(26, 39, 68, 0.88);
   border-left: 3px solid var(--colour-accent);
 }
 
@@ -694,6 +714,13 @@ table.programme td:nth-child(3) {
   height: auto;
   display: block;
   border-radius: 2px;
+}
+
+.bio-photo figcaption {
+  font-family: 'Merriweather Sans', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: var(--colour-muted);
+  margin-top: 0.4rem;
 }
 
 @media (max-width: 680px) {
