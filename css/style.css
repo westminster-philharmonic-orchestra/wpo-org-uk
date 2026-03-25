@@ -612,6 +612,41 @@ table.programme td:nth-child(3) {
   }
 }
 
+/* ─── Home split layout ─────────────────────────────────────────────────────── */
+
+.home-split {
+  display: flex;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+.home-split-flyer {
+  flex: 0 0 auto;
+  width: 50%;
+  max-width: 500px;
+}
+
+.home-split-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-split-content {
+  flex: 1;
+}
+
+@media (max-width: 680px) {
+  .home-split {
+    flex-direction: column;
+  }
+
+  .home-split-flyer {
+    width: 100%;
+    max-width: none;
+  }
+}
+
 /* ─── Concerts page ──────────────────────────────────────────────────────────── */
 
 #concerts h1 {
