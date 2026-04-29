@@ -591,46 +591,7 @@ table.programme td:nth-child(3) {
   }
 }
 
-/* ─── Home split layout ─────────────────────────────────────────────────────── */
-
-.home-split {
-  display: flex;
-  gap: 2.5rem;
-  align-items: flex-start;
-}
-
-.home-split-flyer {
-  flex: 0 0 auto;
-  width: 50%;
-  max-width: 500px;
-}
-
-.home-split-flyer img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.home-split-content {
-  flex: 1;
-}
-
-@media (max-width: 680px) {
-  .home-split {
-    flex-direction: column;
-  }
-
-  .home-split-flyer {
-    width: 100%;
-    max-width: none;
-  }
-}
-
 /* ─── Concerts page ──────────────────────────────────────────────────────────── */
-
-#intro {
-  border-bottom: none;
-}
 
 #news {
   background: var(--colour-bg);
@@ -783,27 +744,23 @@ table.programme td:nth-child(3) {
 
 /* ─── Rehearsal date list ────────────────────────────────────────────────────── */
 
-€ .rehearsal-dates,
-#members .rehearsal-dates {
+#rehearsals .rehearsal-dates {
   width: auto;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
   font-size: 0.85rem;
 }
 
-#rehearsals .rehearsal-dates td,
-#members .rehearsal-dates td {
-  padding: 0.1rem 0.75rem 0.1rem 0;
+#rehearsals .rehearsal-dates td {
+  padding: 0rem 0.75rem 0rem 0;
   border-bottom: none;
 }
 
-#rehearsals .rehearsal-dates tr:last-child td,
-#members .rehearsal-dates tr:last-child td {
+#rehearsals .rehearsal-dates tr:last-child td {
   border-bottom: none;
 }
 
-#rehearsals .rehearsal-dates tbody tr:hover td,
-#members .rehearsal-dates tbody tr:hover td {
+#rehearsals .rehearsal-dates tbody tr:hover td {
   background: none;
 }
 
@@ -877,26 +834,6 @@ table.programme td:nth-child(3) {
     flex: none;
     width: 100%;
   }
-}
-
-/* ─── People grid ────────────────────────────────────────────────────────────── */
-
-.people-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.5rem;
-  margin-top: 0.5rem;
-}
-
-.person {
-  border-left: 3px solid var(--colour-accent);
-  padding-left: 0.75rem;
-}
-
-.person p {
-  margin: 0;
-  color: var(--colour-muted);
-  font-size: 0.95rem;
 }
 
 /* ─── Support page ───────────────────────────────────────────────────────────── */
