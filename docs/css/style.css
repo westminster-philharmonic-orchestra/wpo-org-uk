@@ -209,6 +209,18 @@ nav a[aria-current="page"] {
   padding: 0.5rem 0.85rem;
 }
 
+#sub-nav span[aria-current="page"] {
+  display: block;
+  color: #fff;
+  font-family: 'Merriweather Sans', Arial, Helvetica, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.85rem;
+  border-bottom: 3px solid var(--colour-accent);
+}
+
 /* ─── Hero image ─────────────────────────────────────────────────────────────── */
 
 .hero-image {
