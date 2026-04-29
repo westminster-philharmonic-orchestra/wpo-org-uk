@@ -767,6 +767,20 @@ table.programme td:nth-child(3) {
   border-top: 2px solid var(--colour-border);
 }
 
+.committee-table {
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.committee-table td {
+  padding: 0.25rem 3rem 0.25rem 0;
+  vertical-align: top;
+}
+
+.committee-table td:first-child {
+  white-space: nowrap;
+}
+
 /* ─── Rehearsal date list ────────────────────────────────────────────────────── */
 
 € .rehearsal-dates,
