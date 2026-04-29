@@ -632,12 +632,44 @@ table.programme td:nth-child(3) {
   border-bottom: none;
 }
 
+#news {
+  background: var(--colour-bg);
+}
+
+#news > .section-inner {
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+#news h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--colour-muted);
+  margin-bottom: 0.75rem;
+}
+
+#news .news-item {
+  margin-top: 0.75rem;
+}
+
+#news .news-item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+#news .news-item time {
+  font-style: italic;
+}
+
 #concerts {
   background: none;
 }
 
 #concerts > .section-inner {
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 #concerts h2 {
