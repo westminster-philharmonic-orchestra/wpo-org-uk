@@ -974,3 +974,86 @@ body > footer a:hover {
     align-items: flex-start;
   }
 }
+
+/* ─── Print ──────────────────────────────────────────────────────────────────── */
+
+@media print {
+  header,
+  body > footer,
+  .skip-link {
+    display: none;
+  }
+
+  body {
+    font-size: 10pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  .section-inner {
+    max-width: none;
+    padding: 0;
+  }
+
+  h1 {
+    font-size: 18pt;
+    margin-bottom: 0.5em;
+  }
+
+  h2 {
+    font-size: 13pt;
+    border-bottom: 1pt solid #000;
+    display: block;
+    margin-top: 1.5em;
+    margin-bottom: 0.4em;
+  }
+
+  h3 {
+    font-size: 11pt;
+    margin-top: 1.5em;
+    padding-top: 0.75em;
+    border-top: 1pt solid #ccc;
+    page-break-after: avoid;
+  }
+
+  h4 {
+    font-size: 10pt;
+    margin-top: 1.5em;
+    padding-top: 0.75em;
+    border-top: 1pt solid #ccc;
+    page-break-after: avoid;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+    page-break-inside: avoid;
+  }
+
+  table.programme {
+    border-left: 2pt solid #000;
+    margin-bottom: 0.5em;
+  }
+
+  table.programme td,
+  table.rehearsal-dates td {
+    padding: 0.15em 0.5em 0.15em 0;
+    border-bottom: none;
+    color: #000;
+  }
+
+  table.rehearsal-dates {
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+}
