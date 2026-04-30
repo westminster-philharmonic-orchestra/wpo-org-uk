@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Join the Westminster Philharmonic Orchestra — we welcome experienced amateur musicians. Find out about rehearsals and how to get in touch.">
+  <meta name="description" content="Apply to join the Westminster Philharmonic Orchestra as a player.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://wpo.org.uk/players.html">
-  <meta property="og:title" content="Players &mdash; Westminster Philharmonic Orchestra">
-  <meta property="og:description" content="Join the Westminster Philharmonic Orchestra — we welcome experienced amateur musicians. Find out about rehearsals and how to get in touch.">
+  <meta property="og:url" content="https://wpo.org.uk/join.html">
+  <meta property="og:title" content="Join the Orchestra &mdash; Westminster Philharmonic Orchestra">
+  <meta property="og:description" content="Apply to join the Westminster Philharmonic Orchestra as a player.">
   <meta property="og:image" content="https://wpo.org.uk/assets/wpo-st-johns.jpg">
-  <title>Players &mdash; Westminster Philharmonic Orchestra</title>
+  <title>Join the Orchestra &mdash; Westminster Philharmonic Orchestra</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/jpeg" href="assets/wpo-icon.jpeg">
 </head>
@@ -46,10 +46,10 @@
         <nav id="main-nav">
           <ul>
             <li><a href="index.html">Concerts</a></li>
-            <li><a href="players.html" aria-current="page">Players</a></li>
+            <li><a href="players.html">Players</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="support.html">Support Us</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -58,9 +58,7 @@
       <div class="header-nav-inner">
         <nav id="sub-nav" aria-label="Secondary navigation">
           <ul>
-            <li><a href="members.html">Members</a></li>
-            <li><a href="schedule-2025-2026.html">Schedule 2025-2026</a></li>
-            <li><a href="schedule-2026-2027.html">Schedule 2026-2027</a></li>
+            <li><a href="membership-join.html" aria-current="page">Join the Orchestra</a></li>
           </ul>
         </nav>
       </div>
@@ -68,29 +66,49 @@
   </header>
 
   <main id="main-content">
-    <section id="members">
+    <section>
       <div class="section-inner">
-          <h1>Players</h1>
-        <h2>Join the Orchestra</h2>
+        <h1>Join the Orchestra</h1>
         <p>The Westminster Philharmonic Orchestra welcomes experienced amateur musicians who share a passion for ambitious orchestral repertoire.
-        We are actively seeking string players, although we&rsquo;d love to hear from other instruments.</p>
-        <p><a href="membership-join.html" class="button">Join the Orchestra</a></p>
+        </p>
 
-        <h2>Publicity</h2>
-        <p><a href="assets/WPO-Flyer-2026-05-09-SMALL.jpg" download>Download the flyer for our next concert</a></p>
+        <form class="membership-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="d810cddc-6606-4a35-ae82-2fa53f2af0df">
+          <input type="hidden" name="redirect" value="https://wpo.org.uk/membership-thanks.html">
+          <input type="hidden" name="subject" value="Membership enquiry">
 
-        <h2>Rehearsals</h2>
-        <p>Rehearsals are held on Sundays, 2:30pm&ndash;5:30pm at:</p>
-        <div class="address-map">
-          <address>King Solomon Academy, Penfold Street, London NW1 6RX&nbsp;
-              <a href="https://www.openstreetmap.org/way/111490838#map=17/51.521646/-0.169022" target="_blank" rel="noopener noreferrer">(map)</a>&nbsp;
-              <a href="https://tfl.gov.uk/maps?Input=King%20Solomon%20Academy,%20Penfold%20Street,%20London,%20UK&InputGeolocation=0,0&googlePredictionId=ChIJbxW1ubYadkgRU_yeuygCaFQ" target="_blank" rel="noopener noreferrer">(TFL)</a>
-          </address>
-        </div>
-        <p>Please bring a music stand.</p>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
 
-        <h2>Concerts</h2>
-        <p>Dress code for indoor concerts: Women, long black; Men, black shirt and trousers, no tie, jacket optional.</p>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+          </div>
+
+          <div class="form-field">
+            <label for="instrument">Instrument(s)</label>
+            <textarea id="instrument" name="instrument" rows="2" required></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="source">How did you hear about us? <span class="form-optional">(optional)</span></label>
+            <textarea id="source" name="source" rows="2"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Anything else <span class="form-optional">(optional)</span></label>
+            <textarea id="message" name="message" rows="2"></textarea>
+          </div>
+
+          <button class="button" type="submit">Join</button>
+        </form>
       </div>
     </section>
   </main>
