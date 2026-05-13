@@ -1125,3 +1125,22 @@ body > footer a:hover {
     margin-bottom: 0.5em;
   }
 }
+
+/* Image gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.image-gallery figure {
+  margin: 0;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
