@@ -243,8 +243,8 @@ DTSTART;TZID=Europe/London:20270417T193000
 DTEND;TZID=Europe/London:20270417T220000
 SUMMARY:WPO Concert 4
 LOCATION:St Mildred's\, Addiscombe\, Croydon
-DESCRIPTION:Handel/Elgar - Overture in D minor\; Parry - Blest Pair of
- Sirens\; Hackbridge Johnson - Organ Concerto (world premiere)\;
+DESCRIPTION:Handel/Elgar - Overture in D minor\; Hackbridge-Johnson -
+ Organ Concerto (world premiere)\; Parry - Blest Pair of Sirens\;
  Saint-Saens - Symphony No. 3 "Organ"
 END:VEVENT
 BEGIN:VEVENT
