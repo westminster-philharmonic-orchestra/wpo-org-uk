@@ -28,16 +28,19 @@ Website files live in `docs/`. Other directories (`exported-from-wordpress/`, `m
 
 Within `docs/`:
 
-- `index.html` — home page / site entry point
-- `concerts.html` — upcoming concerts listing
-- `concerts/` — individual concert detail pages (e.g. `spring-2026-05-09.html`)
-- `rehearsals.html` — rehearsal schedule; `rehearsals.ics` — iCal feed
+- `index.html` — home page; includes upcoming concerts listing
+- `previous-seasons.html` — archive of past concert seasons
+- `concerts/YYYY-MM-DD/` — one subdirectory per concert, containing the detail page and assets (flyer, programme notes)
+- `schedule-YYYY-YYYY.html` / `schedule-YYYY-YYYY.ics` — per-season rehearsal schedule and iCal feed
 - `about.html`, `history.html`, `people.html` — orchestra information
+- `players.html` — player/member directory
+- `images.html` — gallery
 - `members.html` — member resources
+- `membership-join.html`, `membership-thanks.html` — membership sign-up flow
 - `support.html`, `contact.html` — supporting and contacting the orchestra
 - `css/style.css` — single stylesheet
 - `js/main.js` — minimal site-wide JavaScript (nav toggle etc.)
-- `assets/` — images, logos, icons
+- `assets/` — images, logos, icons; subdirectories include `agm/` and `images/`
 - `fonts/` — web fonts
 
 ## Conventions
@@ -47,4 +50,4 @@ Within `docs/`:
 - JavaScript: dependency-free, minimal, progressive enhancement only
 - CSS: plain, no preprocessors; single `style.css`
 - Support both desktop and mobile browsers
-- New concert pages go in `concerts/` following the `season-YYYY-MM-DD.html` naming pattern
+- New concert pages go in `concerts/YYYY-MM-DD/` following the existing subdirectory pattern
