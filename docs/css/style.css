@@ -1,6 +1,68 @@
 /* ─── Fonts ──────────────────────────────────────────────────────────────────── */
 
-@import url('../fonts/fonts.css');
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/merriweather-300-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/merriweather-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/merriweather-300-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/merriweather-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/merriweather-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/merriweather-sans-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/merriweather-sans-600-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/merriweather-sans-700-normal.woff2') format('woff2');
+}
 
 /* ─── Reset & base ───────────────────────────────────────────────────────────── */
 
@@ -297,46 +359,12 @@ nav a[aria-current="page"] {
   .pull-quote-overlay { display: none; }
 }
 
-/* ─── Hero ───────────────────────────────────────────────────────────────────── */
-
-.hero {
-  background-color: var(--colour-primary);
-  background-image: url('../assets/hero.jpg');
-  background-size: cover;
-  background-position: center top;
-  color: #fff;
-  position: relative;
-}
-
-.hero::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 25, 55, 0.68);
-}
-
-.hero .section-inner {
-  position: relative;
-  z-index: 1;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
 .next-label {
   font-family: 'Merriweather Sans', Arial, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--colour-accent);
   margin-bottom: 0.5rem;
-}
-
-.hero h1 {
-  font-family: 'Merriweather Sans', Arial, sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.15;
-  margin-bottom: 0.4rem;
-  color: #fff;
 }
 
 .concert-details {
@@ -397,6 +425,11 @@ nav a[aria-current="page"] {
 .button:hover {
   background: transparent;
   color: var(--colour-accent);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--colour-accent);
+  outline-offset: 3px;
 }
 
 /* ─── Section header with inline action ─────────────────────────────────────── */
@@ -468,30 +501,15 @@ nav a[aria-current="page"] {
   transition: border-color 0.15s;
 }
 
-.form-field input:focus,
-.form-field textarea:focus {
-  outline: none;
+.form-field input:focus-visible,
+.form-field textarea:focus-visible {
+  outline: 2px solid var(--colour-accent);
+  outline-offset: 1px;
   border-color: var(--colour-accent);
 }
 
 .form-field textarea {
   resize: vertical;
-}
-
-.hero .button:hover {
-  color: #fff;
-  border-color: #fff;
-  background: transparent;
-}
-
-.hero a:not(.button) {
-  color: rgba(255, 255, 255, 0.9);
-  text-decoration-color: rgba(255, 255, 255, 0.4);
-}
-
-.hero a:not(.button):hover {
-  color: #fff;
-  text-decoration-color: rgba(255, 255, 255, 0.8);
 }
 
 /* ─── Sections ───────────────────────────────────────────────────────────────── */
@@ -500,7 +518,7 @@ section {
   border-bottom: 1px solid var(--colour-border);
 }
 
-section:nth-of-type(even) {
+.section-alt {
   background: var(--colour-surface);
 }
 
