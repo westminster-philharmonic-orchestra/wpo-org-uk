@@ -29,19 +29,32 @@ Website files live in `docs/`. Other directories (`exported-from-wordpress/`, `m
 Within `docs/`:
 
 - `index.html` — home page; includes upcoming concerts listing
-- `previous-seasons.html` — archive of past concert seasons
-- `concerts/YYYY-MM-DD/` — one subdirectory per concert, containing the detail page and assets (flyer, programme notes)
-- `schedule-YYYY-YYYY.html` / `schedule-YYYY-YYYY.ics` — per-season rehearsal schedule and iCal feed
-- `about.html`, `history.html`, `people.html` — orchestra information
-- `players.html` — player/member directory
-- `images.html` — gallery
-- `members.html` — member resources
-- `membership-join.html`, `membership-thanks.html` — membership sign-up flow
 - `support.html`, `contact.html` — supporting and contacting the orchestra
+- `concerts/YYYY-MM-DD/` — one subdirectory per concert, containing the detail page and assets (flyer, programme notes)
 - `css/style.css` — single stylesheet
 - `js/main.js` — minimal site-wide JavaScript (nav toggle etc.)
 - `assets/` — images, logos, icons; subdirectories include `agm/` and `images/`
 - `fonts/` — web fonts
+
+`about/` — public-facing orchestra information:
+- `about/index.html` — about page
+- `about/history.html` — orchestra history
+- `about/people.html` — people
+- `about/images.html` — gallery
+- `about/previous-seasons.html` — archive of past concert seasons
+
+`players/` — player and member resources:
+- `players/index.html` — join the orchestra, rehearsal info
+- `players/members.html` — member resources
+- `players/membership-join.html`, `players/membership-thanks.html` — membership sign-up flow
+- `players/schedule-YYYY-YYYY.html` / `players/schedule-YYYY-YYYY.ics` — per-season rehearsal schedule and iCal feed
+
+## Sub-navigation
+
+Each section (`about/`, `players/`) has a sub-nav bar that appears on every page within that section. When adding a new page to a section:
+
+- Add a `<li><a href="new-page.html">Title</a></li>` to the sub-nav on every existing page in that section
+- On the new page itself, use `<li><span aria-current="page">Title</span></li>` instead of a link
 
 ## Conventions
 
