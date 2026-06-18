@@ -22,19 +22,26 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000` in a browser. Files can also be opened directly, but fetch-based features may not work.
 
+## Deployment
+
+The `docs/` directory is served via GitHub Pages. `docs/CNAME` sets the custom domain. Do not remove or rename the CNAME file.
+
 ## Structure
 
 Website files live in `docs/`. Other directories (`exported-from-wordpress/`, `making-music-logos/`) are support and administration material.
+
+The `supporting/` directory is a local working area for admin documents (AGM minutes, reports, etc.) — it is not committed to the repo and should not be linked from the site directly; PDFs for publication are copied into `docs/assets/agm/YYYY/`.
 
 Within `docs/`:
 
 - `index.html` — home page; includes upcoming concerts listing
 - `support.html`, `contact.html` — supporting and contacting the orchestra
-- `concerts/YYYY-MM-DD/` — one subdirectory per concert, containing the detail page and assets (flyer, programme notes)
+- `concerts/YYYY-MM-DD/` — one subdirectory per concert; the detail page (if present) is named `concert-YYYY-MM-DD.html`; assets (flyers, programme notes) live alongside it. Some directories contain only flyer images with no HTML page — that is valid.
 - `css/style.css` — single stylesheet
 - `js/main.js` — minimal site-wide JavaScript (nav toggle etc.)
-- `assets/` — images, logos, icons; subdirectories include `agm/` and `images/`
-- `fonts/` — web fonts
+- `assets/` — images, logos, icons; `assets/images/` for photos; `assets/agm/YYYY/` for AGM PDFs organised by year
+- `fonts/fonts.css` — `@font-face` declarations for the Merriweather family
+- `fonts/` — web font files (.woff2)
 
 `about/` — public-facing orchestra information:
 - `about/index.html` — about page
@@ -45,7 +52,7 @@ Within `docs/`:
 
 `players/` — player and member resources:
 - `players/index.html` — join the orchestra, rehearsal info
-- `players/members.html` — member resources
+- `players/members.html` — member resources, including links to AGM documents (from `assets/agm/YYYY/`)
 - `players/membership-join.html`, `players/membership-thanks.html` — membership sign-up flow
 - `players/schedule-YYYY-YYYY.html` / `players/schedule-YYYY-YYYY.ics` — per-season rehearsal schedule and iCal feed
 
