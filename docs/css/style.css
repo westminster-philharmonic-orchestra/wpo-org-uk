@@ -476,7 +476,8 @@ nav a[aria-current="page"] {
   display: contents;
 }
 
-.form-field label {
+.form-field label,
+.form-field .form-label {
   padding-top: 0.55rem;
   font-family: 'Merriweather Sans', Arial, sans-serif;
   font-size: 0.85rem;
@@ -493,7 +494,7 @@ nav a[aria-current="page"] {
   color: var(--colour-muted);
 }
 
-.form-field input:not([type="checkbox"]),
+.form-field input:not([type="checkbox"]):not([type="radio"]),
 .form-field select,
 .form-field textarea {
   width: 100%;
@@ -530,7 +531,21 @@ nav a[aria-current="page"] {
   padding-top: 0.45rem;
 }
 
-.form-field input[type="checkbox"] {
+.form-field .form-choices label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 0;
+  font-family: 'Merriweather', Georgia, serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--colour-text);
+}
+
+.form-field input[type="checkbox"],
+.form-field input[type="radio"] {
   width: 1.1rem;
   height: 1.1rem;
   margin: 0;

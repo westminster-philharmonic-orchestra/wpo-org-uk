@@ -106,12 +106,11 @@
           </div>
 
           <div class="form-field">
-            <label for="registration_type">Registration type</label>
-            <select id="registration_type" name="registration_type" required>
-              <option value="">Please choose&hellip;</option>
-              <option>Player</option>
-              <option>Supporter</option>
-            </select>
+            <span class="form-label" id="registration_type-label">Registration type</span>
+            <div class="form-choices" role="radiogroup" aria-labelledby="registration_type-label">
+              <label><input type="radio" name="registration_type" value="Player" required> Player</label>
+              <label><input type="radio" name="registration_type" value="Supporter"> Supporter</label>
+            </div>
           </div>
 
           <div class="form-field">
