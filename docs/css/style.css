@@ -519,6 +519,10 @@ nav a[aria-current="page"] {
   resize: vertical;
 }
 
+.form-field .form-input-short {
+  max-width: 8rem;
+}
+
 .form-choices {
   display: flex;
   flex-wrap: wrap;

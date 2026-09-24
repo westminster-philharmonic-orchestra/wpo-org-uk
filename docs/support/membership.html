@@ -69,8 +69,18 @@
           <input type="hidden" name="_subject" value="Membership form">
 
           <div class="form-field">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required>
+            <label for="title">Title <span class="form-optional">(optional)</span></label>
+            <input type="text" id="title" name="title" autocomplete="honorific-prefix" class="form-input-short">
+          </div>
+
+          <div class="form-field">
+            <label for="personal_name">Personal name</label>
+            <input type="text" id="personal_name" name="personal_name" autocomplete="given-name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="family_name">Family name</label>
+            <input type="text" id="family_name" name="family_name" autocomplete="family-name" required>
           </div>
 
           <div class="form-field">
