@@ -37,7 +37,8 @@ The `supporting/` directory is a local working area for admin documents (AGM min
 Within `docs/`:
 
 - `index.html` — home page; includes upcoming concerts listing
-- `support.html`, `contact.html` — supporting and contacting the orchestra
+- `support/index.html` — supporting the orchestra (`support.html` is a redirect stub for old links)
+- `contact.html` — contacting the orchestra
 - `concerts/YYYY-MM-DD/` — one subdirectory per concert; the detail page (if present) is named `concert-YYYY-MM-DD.html`; assets (flyers, programme notes) live alongside it. Some directories contain only flyer images with no HTML page — that is valid. A detail page can also exist before flyer/programme-notes assets are ready — omit the `concert-hero-flyer` image and the programme notes link until they're supplied, rather than inventing placeholders.
 - `css/style.css` — single stylesheet
 - `js/main.js` — minimal site-wide JavaScript (nav toggle etc.)
