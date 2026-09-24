@@ -101,8 +101,8 @@
           </div>
 
           <div class="form-field">
-            <label for="address">Address</label>
-            <textarea id="address" name="address" rows="3" autocomplete="street-address" required></textarea>
+            <label for="house">House name or number</label>
+            <input type="text" id="house" name="house" autocomplete="address-line1" required>
           </div>
 
           <div class="form-field">
@@ -111,10 +111,12 @@
           </div>
 
           <div class="form-field">
-            <label for="player">Player</label>
-            <div class="form-choices">
-              <input type="checkbox" id="player" name="player" value="Yes">
-            </div>
+            <label for="member_type">Member type</label>
+            <select id="member_type" name="member_type" required>
+              <option value="">Please choose&hellip;</option>
+              <option>Player</option>
+              <option>Supporter</option>
+            </select>
           </div>
 
           <div class="form-field">
