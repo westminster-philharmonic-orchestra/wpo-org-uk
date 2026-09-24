@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Become a member of the Westminster Philharmonic Orchestra.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://wpo.org.uk/support/membership.html">
+  <meta property="og:title" content="Membership Form &mdash; Westminster Philharmonic Orchestra">
+  <meta property="og:description" content="Become a member of the Westminster Philharmonic Orchestra.">
+  <meta property="og:image" content="https://wpo.org.uk/assets/wpo-st-johns.jpg">
+  <title>Membership Form &mdash; Westminster Philharmonic Orchestra</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/jpeg" href="../assets/wpo-icon.jpeg">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header>
+    <div class="header-brand">
+      <div class="header-brand-inner">
+        <a href="../index.html" class="site-title">
+          <img src="../assets/wpo-logo.png" alt="" class="site-logo" width="1063" height="377">
+          <span class="title-main">Westminster Philharmonic Orchestra</span>
+          <span class="title-tagline">One of London&rsquo;s leading amateur orchestras</span>
+        </a>
+      </div>
+    </div>
+    <div class="header-nav-bar">
+      <div class="header-nav-inner">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">&#9776;</button>
+      <div class="social-links">
+        <a href="https://www.facebook.com/WestminsterPhilharmonicOrchestra" aria-label="WPO on Facebook" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/westminster_philharmonic_wpo/" aria-label="WPO on Instagram" target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+          </svg>
+        </a>
+      </div>
+        <nav id="main-nav">
+          <ul>
+            <li><a href="../index.html">Concerts</a></li>
+            <li><a href="../players/">Players</a></li>
+            <li><a href="../about/">About</a></li>
+            <li><a href="index.html" aria-current="page">Support Us</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section>
+      <div class="section-inner">
+        <h1>Membership Form</h1>
+
+        <form class="membership-form" action="https://formspree.io/f/xnpnzvqg" method="POST">
+          <input type="hidden" name="_subject" value="Membership form">
+
+          <div class="form-field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="employment">Employment</label>
+            <select id="employment" name="employment" required>
+              <option value="">Please choose&hellip;</option>
+              <option>Full time</option>
+              <option>Part time</option>
+              <option>Retired</option>
+              <option>Student</option>
+              <option>Unemployed</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="address">Address</label>
+            <textarea id="address" name="address" rows="3" autocomplete="street-address" required></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="postcode">Post code</label>
+            <input type="text" id="postcode" name="postcode" autocomplete="postal-code" required>
+          </div>
+
+          <div class="form-field">
+            <label for="player">Player</label>
+            <div class="form-choices">
+              <input type="checkbox" id="player" name="player" value="Yes">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="uk_tax_payer">UK tax payer</label>
+            <div class="form-choices">
+              <input type="checkbox" id="uk_tax_payer" name="uk_tax_payer" value="Yes">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="gift_aid">Gift Aid</label>
+            <div class="form-choices">
+              <input type="checkbox" id="gift_aid" name="gift_aid" value="Yes" aria-describedby="gift_aid-hint">
+              <p class="form-hint" id="gift_aid-hint">I am a UK taxpayer and want the WPO to claim Gift Aid on my membership subscription and donations. I understand that if I pay less Income Tax and/or Capital Gains Tax than the amount of Gift Aid claimed on all my donations in a tax year, it is my responsibility to pay any difference.</p>
+            </div>
+          </div>
+
+          <button class="button" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-inner">
+      <p>&copy; <span id="year"></span> Westminster Philharmonic Orchestra &mdash; Registered Charity No. 1053703</p>
+      <p><a href="mailto:contact@wpo.org.uk">Contact</a></p>
+      <img loading="lazy" src="../assets/mm-logo-footer.png" alt="Making Music" class="footer-logo" width="90" height="48">
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
