@@ -891,7 +891,7 @@ table.programme td:nth-child(3) {
 }
 
 .committee-table td {
-  padding: 0.25rem 3rem 0.25rem 0;
+  padding: 0.0rem 3rem 0.1rem 0;
   vertical-align: top;
 }
 
