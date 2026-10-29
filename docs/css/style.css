@@ -700,27 +700,53 @@ table.programme td:nth-child(3) {
 /* ─── Concert detail page ────────────────────────────────────────────────────── */
 
 .concert-detail .section-inner {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .concert-detail .next-label {
   color: var(--colour-accent);
+  margin-bottom: 0.25rem;
+}
+
+.concert-detail h1 {
+  margin-bottom: 0.5rem;
+}
+
+.concert-detail p {
+  margin-bottom: 0.75rem;
+}
+
+.concert-detail .concert-details {
+  margin-bottom: 0.1rem;
 }
 
 .concert-detail .concert-venue {
   color: var(--colour-muted);
+  margin-bottom: 0.75rem;
+}
+
+.concert-detail .programme {
+  margin-bottom: 1.5rem;
+}
+
+.concert-detail .programme li {
+  padding: 0.1rem 0;
 }
 
 .concert-hero {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .concert-hero-info {
   flex: 1;
+}
+
+.concert-detail .concert-hero-info p:last-child {
+  margin-bottom: 0;
 }
 
 .concert-hero-flyer {
